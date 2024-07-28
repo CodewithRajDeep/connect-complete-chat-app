@@ -18,3 +18,8 @@ due to their immediacy and vast capabilities.
 4. Buisness
 
 ## How to start:
+
+
+## Work demomstration: 
+<img src="https://sendbird.sfo3.digitaloceanspaces.com/cms/3.-user-moderation.gif" width="256"/>
+<img src="https://blog.flock.com/hubfs/GIFs/chat.gif" width="256"/>
