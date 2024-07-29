@@ -23,3 +23,4 @@ due to their immediacy and vast capabilities.
 ## Work demomstration: 
 <img src="https://sendbird.sfo3.digitaloceanspaces.com/cms/3.-user-moderation.gif" width="256"/>
 <img src="https://blog.flock.com/hubfs/GIFs/chat.gif" width="256"/>
+<img src="https://cdn.dribbble.com/users/543480/screenshots/3993214/gif_animation_dribbble_shot.gif" width="256"/>
