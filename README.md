@@ -50,6 +50,10 @@ Open a Pull Request: Create a pull request from your branch to the main reposito
 Provide details: Clearly describe the changes you've made and the benefits they bring.
 Address code review feedback: Be open to feedback and make necessary changes.
 
+**Testing**
+Write unit tests for any new features or bug fixes.
+Ensure existing tests pass after your changes.
+
 ## License
 
 
