@@ -22,10 +22,12 @@ due to their immediacy and vast capabilities.
    ```bash
    git clone [invalid URL removed]
 2. **Install all dependcies**
-   cd your-project
+    ```bash
+    cd your-project
    npm install
 3. **start the development server**
-     npm start
+     ```bash
+      npm start
    
 ## Contributing
 Guidelines for contributing to the project.
