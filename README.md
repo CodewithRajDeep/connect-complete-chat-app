@@ -31,7 +31,7 @@ due to their immediacy and vast capabilities.
    
 ## Contributing
 Guidelines for contributing to the project.
-**Reporting Issues**
+**Reporting Issues:**
 Search for existing issues: Before creating a new issue, search the issue tracker to see if the problem has already been reported.
 Provide clear and concise information: When creating a new issue, please include as much detail as possible, such as:
 Clear description of the problem
@@ -41,7 +41,7 @@ Actual behavior
 Screenshots or logs (if applicable)
 Use issue templates: If available, use the provided issue templates to structure your report.
 
-**Submitting Pull Requests**
+**Submitting Pull Requests:**
 Fork the repository: Create a fork of the project on your GitHub account.
 Create a new branch: Create a new branch based on the main branch or a feature branch.
 Make changes: Implement your changes and commit them with clear commit messages.
@@ -50,7 +50,7 @@ Open a Pull Request: Create a pull request from your branch to the main reposito
 Provide details: Clearly describe the changes you've made and the benefits they bring.
 Address code review feedback: Be open to feedback and make necessary changes.
 
-**Testing**
+**Testing:**
 Write unit tests for any new features or bug fixes.
 Ensure existing tests pass after your changes.
 
