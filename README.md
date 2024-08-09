@@ -55,8 +55,8 @@ Write unit tests for any new features or bug fixes.
 Ensure existing tests pass after your changes.
 
 ## License
-
-
+MIT License
+Copyright (c) 2024 Deep Raj 
 ## Work demomstration: 
 <img src="https://sendbird.sfo3.digitaloceanspaces.com/cms/3.-user-moderation.gif" width="256"/>
 <img src="https://blog.flock.com/hubfs/GIFs/chat.gif" width="256"/>
