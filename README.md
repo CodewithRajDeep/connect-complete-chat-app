@@ -18,6 +18,19 @@ due to their immediacy and vast capabilities.
 4. Buisness
 
 ## How to start:
+1. **Clone the repository:**
+   ```bash
+   git clone [invalid URL removed]
+2. **Install all dependcies**
+   cd your-project
+   npm install
+3. **start the development server**
+     npm start
+   
+## Contributing
+Guidelines for contributing to the project.
+
+## License
 
 
 ## Work demomstration: 
