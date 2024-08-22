@@ -9,7 +9,7 @@ team members to increase the work ratio within Kanban or either scrum sprint ove
 Messaging has become a part of our everyday lives in part due to its convenience for real-time chat communication and simple-to-use functionality. For instance,
 an iOS or text message on an iPhone or Android device from a friend, an email from a co-worker on Microsoft or Gmail, a team chat in a Slack or Microsoft Teams
 workspace, or even instant messaging through social media. These messaging and real-time chat applications play an important role in how the world interacts today,
-due to their immediacy and vast capabilities. 
+
 
 ## Field where it can be implemented: 
 1. Team Meeting,
