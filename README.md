@@ -15,7 +15,7 @@ due to their immediacy and vast capabilities.
 1. Team Meeting,
 2. Increment in DevOps practices by 40%.
 3. Members communication.
-4. Buisness
+
 
 ## How to start:
 1. **Clone the repository:**
