@@ -5,10 +5,10 @@ import { useAuthContext } from './context/AuthContext.jsx';
 import Home from './pages/home/Home.jsx';
 import Login from './pages/Login/Login.jsx';
 import SignUp from './pages/signup/SignUp.jsx';
-import axios from 'axios';
+import publicClient from './client/publicClient.js'; 
 import { useState } from 'react';
 
-const API_URL = 'https://connect-chat-app-five.vercel.app/api/auth';
+const API_URL = 'https://connect-chat-app-api.vercel.app/api/auth';
 
 function App() {
   const { authUser, setAuthUser } = useAuthContext();
@@ -20,12 +20,12 @@ function App() {
     setErrorMessage('');
     
     try {
-      const response = await axios.post(`${API_URL}/login`, { username, password });
-      console.log('Login Response:', response.data);
-      setAuthUser(response.data);
+      const response = await publicClient.post(`${API_URL}/login`, { username, password });
+      console.log('Login Response:', response);
+      setAuthUser(response);
     } catch (error) {
-      console.error('Login Error:', error.response?.data || error.message);
-      setErrorMessage(error.response?.data?.error || 'An error occurred during login.');
+      console.error('Login Error:', error);
+      setErrorMessage(error?.error || 'An error occurred during login.');
     } finally {
       setLoading(false);
     }
@@ -36,18 +36,18 @@ function App() {
     setErrorMessage('');
     
     try {
-      const response = await axios.post(`${API_URL}/signup`, {
+      const response = await publicClient.post(`${API_URL}/signup`, {
         fullName,
         username,
         password,
         confirmPassword,
         gender,
       });
-      console.log('Signup Response:', response.data);
-      setAuthUser(response.data);
+      console.log('Signup Response:', response);
+      setAuthUser(response);
     } catch (error) {
-      console.error('Signup Error:', error.response?.data || error.message);
-      setErrorMessage(error.response?.data?.error || 'An error occurred during signup.');
+      console.error('Signup Error:', error);
+      setErrorMessage(error?.error || 'An error occurred during signup.');
     } finally {
       setLoading(false);
     }
