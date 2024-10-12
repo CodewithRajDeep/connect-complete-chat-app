@@ -1,12 +1,21 @@
 {
-    "version":2,
+    "name": "complete-chat-app",
     "builds": [
-        { "src" : "*.js", "use": "@vercel/node"}
+      {
+        "src": "backend/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "frontend/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "frontend/dist"
+        }
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
+      { "src": "/api/(.*)", "dest": "backend/server.js" },  
+      { "src": "/(.*)", "dest": "/frontend/index.html" } 
     ]
-}
+  }
+  
