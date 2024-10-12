@@ -9,6 +9,7 @@ import SignUp from './pages/signup/SignUp.jsx';
 
 function App() {
   const {authUser} = useAuthContext();
+ 
   return (
     <div className='p-4 h-screen flex items-center justify-center'>
       <Routes>
