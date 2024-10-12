@@ -2,16 +2,21 @@ import bcryptjs from 'bcryptjs';
 import User from '../models/user.model.js';
 import generateTokenandSetCookie from '../utils/generateToken.js';
 
+const handleErrorResponse = (res, errorMessage, statusCode = 500) => {
+    console.log(errorMessage);  
+    res.status(statusCode).json({ error: errorMessage });
+};
+
 export const signup = async (req, res) => {
     try {
         const { fullName, username, password, confirmPassword, gender } = req.body;
         if (password !== confirmPassword) {
-            return res.status(400).json({ error: "Password didn't match" });
+            return handleErrorResponse(res, "Password didn't match", 400);
         }
 
         const user = await User.findOne({ username });
         if (user) {
-            return res.status(400).json({ error: "Username already exists" });
+            return handleErrorResponse(res, "Username already exists", 400);
         }
 
         const salt = await bcryptjs.genSalt(10);
@@ -27,7 +32,6 @@ export const signup = async (req, res) => {
             profilePic: gender === "male" ? boyProfilePic : girlProfilePic,
         });
 
-        
         await newUser.save();
         generateTokenandSetCookie(newUser._id, res);  
         res.status(201).json({
@@ -38,8 +42,7 @@ export const signup = async (req, res) => {
         });
         
     } catch (error) {
-        console.log("Error in signup controller", error.message);
-        res.status(500).json({ error: "Internal server Error" });
+        handleErrorResponse(res, "Error in signup controller: " + error.message);
     }
 };
 
@@ -48,14 +51,13 @@ export const login = async (req, res) => {
         const { username, password } = req.body;
         const user = await User.findOne({ username });
 
-        
         if (!user) {
-            return res.status(400).json({ error: "Invalid credentials" });
+            return handleErrorResponse(res, "Invalid credentials", 400);
         }
 
         const isPasswordCorrect = await bcryptjs.compare(password, user.password);
         if (!isPasswordCorrect) {
-            return res.status(400).json({ error: "Invalid credentials" });
+            return handleErrorResponse(res, "Invalid credentials", 400);
         }
 
         generateTokenandSetCookie(user._id, res);
@@ -67,8 +69,7 @@ export const login = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Error in login controller", error.message);
-        res.status(500).json({ error: "Internal server Error" });
+        handleErrorResponse(res, "Error in login controller: " + error.message);
     }
 };
 
