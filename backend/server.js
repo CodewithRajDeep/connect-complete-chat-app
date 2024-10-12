@@ -19,7 +19,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
 
-
+const cors = require('cors');
+app.use(cors({ origin: 'https://connect-chat-app-eight.vercel.app' }));
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
