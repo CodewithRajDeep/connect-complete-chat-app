@@ -8,7 +8,7 @@ import SignUp from './pages/signup/SignUp.jsx';
 import axios from 'axios';
 import { useState } from 'react';
 
-const API_URL = 'https://connect-chat-app-api.vercel.app/api/auth';
+const API_URL = 'https://connect-chat-app-five.vercel.app/api/auth';
 
 function App() {
   const { authUser, setAuthUser } = useAuthContext();

@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
     origin: [
         'http://localhost:3000', 
-        'https://connect-chat-app-api.vercel.app',
+        'https://connect-chat-app-five.vercel.app',
     ], 
     credentials: true
 }));
